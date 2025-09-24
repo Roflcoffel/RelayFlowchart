@@ -1,9 +1,34 @@
 body {
-    font-size: x-large
+  font-size: large;
+}
+
+.big-text {
+  font-size: 2.0rem;
+  font-weight: 500;
 }
 
 .sparledning-space {
-    margin-top: 200px;
+  margin-top: 200px;
+}
+
+.vl {
+  border-left: 2px solid black;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.vl-offset {
+  margin-left: -80px;
+}
+
+.vl-offset-2 {
+  margin-left: -80px;
+}
+
+.hl {
+  border-top: 2px solid black;
+  width: 200px;
+  margin-left: -80px;
 }
 
 #train {
@@ -13,4 +38,17 @@ body {
   width: auto;
   height: 100px;
   top: 10px
+}
+
+.circle {
+  display: flex;
+  font-size: x-large;
+  justify-content: center; 
+  align-items: center;    
+  width: 30px;            
+  height: 30px;
+  border: 2px solid black;
+  color: black;      
+  border-radius: 50%;
+  text-align: center;
 }

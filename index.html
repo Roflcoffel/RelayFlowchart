@@ -1,20 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="lib/spectre.min.css">
+    <link rel="stylesheet" href="lib/spectre.css">
     <link rel="stylesheet" href="style.css">
+
+    <script src="lib/p5.min.js"></script>
+    <script src="sketch.js"></script>
 </head>
 <body class="container">
     <img src="assets/train.jpg" id="train"></img>
 
-    <div class="columns sparledning-space">    
-        <div class="column col-4 col-mx-auto">
-            <u>Atk</u>
-            Vsv
-            Iv
+    <div class="columns sparledning-space">
+        <div class="column col-1"></div>
+        <div class="column col-3">
+            <h3>Normal Läge Relän</h3>
+            <ul>
+                <li>SIv = Iv</li>
+                <li>SIIv = IIv</li>
+            </ul>
+            <p>
+                Alla relän i tabellen nedan som har
+                ett <u>understreck</u> är normalt dragna.
+            </p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Relä namn</th>
+                        <th>Beskrivning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <u>Iv</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <u>Sv</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <u>IIv</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <u>RVv</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <u>Vv</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Akv</td>
+                    </tr>
+                    <tr>
+                        <td>TRAkvg</td>
+                    </tr>
+                    <tr>
+                        <td>TRVv</td>
+                    </tr>
+                    <tr>
+                        <td>FdIv</td>
+                    </tr>
+                    <tr>
+                        <td>FdSv</td>
+                    </tr>
+                    <tr>
+                        <td>FdIIv</td>
+                    </tr>
+                    <tr>
+                        <td>Vsv</td>
+                    </tr>
+                </tbody>    
+            </table>
+        </div>
+        <div class="column col-5 big-text">
+            <main></main>
+            <div class="columns col-gapless">
+                <div class="column col-1 col-mx-auto">Iv</div>
+            </div>
+            <div class="columns col-gapless">
+                <div class="column col-1 col-mx-auto">
+                    <div class="vl"></div>
+                </div>
+            </div>
+            <div class="columns col-gapless">
+                <div class="column col-1 col-mx-auto">Vv</div>
+            </div>
+            <div class="columns col-gapless">
+                <div class="column col-1 col-mx-auto">
+                    <div class="vl"></div>
+                </div>
+            </div>
+            <div class="columns col-gapless">
+                <div class="column col-1 col-mx-auto">
+                    <div class="hl"></div>
+                </div>
+            </div>
+             <div class="columns col-gapless">
+                <div class="column col-1">
+                    <div class="vl"></div>
+                </div>
+                 <div class="column col-1 col-mx-auto">
+                    <div class="vl"></div>
+                </div>
+            </div>
+        </div>
+        <div class="column col-mx-auto big-text">
+            <div class="columns">
+                <div class="column col-mx-auto">
+                    <div class="circle">1</div>
+                </div>
+            </div>
+             <div class="columns">
+                 <div class="column col-mx-auto">
+                    <div class="circle">2</div>
+                </div>
+            </div>
+             <div class="columns">
+                <div class="column col-mx-auto">
+                    <div class="circle">3</div>
+                </div>
+            </div>
+             <div class="columns">
+                 <div class="column col-mx-auto">
+                    <div class="circle">4</div>
+                </div>
+            </div>
         </div>
     </div>
-
     <script src="flode.js"> </script>
 </body>
 <footer class="container">

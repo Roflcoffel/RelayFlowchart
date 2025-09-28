@@ -10,11 +10,22 @@
     <script src="sketch.js"></script>
 </head>
 <body class="container">
-    <img src="assets/train.jpg" id="train"></img>
-
+    <div class="point" id="siv"></div>
+    <div class="point" id="sv-in"></div>
+    <div class="point" id="sv-out"></div>
+    <div class="point" id="siiv"></div>
+    <img src="assets/train.png" id="train"></img>
+    <div class="columns sparledning-space-small">
+        <div class="column col-mx-auto"><img class="img-responsive" src="assets/linjebana.png"></img></div>
+    </div>
     <div class="columns sparledning-space">
+        <div class="column col-mx-auto"></div>
+        <div class="column col-mx-auto"><h1 id="title">CD-Anläggning<h1></div>
+        <div class="column col-mx-auto"></div>
+    </div>
+    <div class="columns">
         <div class="column col-1"></div>
-        <div class="column col-3">
+        <div class="column col-5">
             <h3>Normal Läge Relän</h3>
             <ul>
                 <li>SIv = Iv</li>
@@ -33,55 +44,57 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <u>Iv</u>
-                        </td>
+                        <td><u>Iv</u></td>
+                        <td>Spårledningsupptag</td>
                     </tr>
                     <tr>
-                        <td>
-                            <u>Sv</u>
-                        </td>
+                        <td><u>Sv</u></td>
+                        <td>Spårledningsupptag</td>
                     </tr>
                     <tr>
-                        <td>
-                            <u>IIv</u>
-                        </td>
+                        <td><u>IIv</u></td>
+                        <td>Spårledningsupptag</td>
                     </tr>
                     <tr>
-                        <td>
-                            <u>RVv</u>
-                        </td>
+                        <td><u>RVv</u></td>
+                        <td>Manöverrelä för varningssignalering, repeteringsrelä för <u>Vv</u></td>
                     </tr>
                     <tr>
-                        <td>
-                            <u>Vv</u>
-                        </td>
+                        <td><u>Vv</u></td>
+                        <td>Varningssignalering väg, startar signalering</td>
                     </tr>
                     <tr>
                         <td>Akv</td>
+                        <td>Avkopplingsrelä för vägskyddsanläggning</td>
                     </tr>
                     <tr>
-                        <td>TRAkvg</td>
+                        <td>TRAkvB</td>
+                        <td>Tid Relä för kontroll om <u>Akv</u> är draget</td>
                     </tr>
                     <tr>
                         <td>TRVv</td>
+                        <td>Tid Relä för återställning av <u>Vv</u> och varningssignalering vid en belägning av Iv eller IIv</td>
                     </tr>
                     <tr>
                         <td>FdIv</td>
+                        <td>Färdriktningsrelä som styrs av Iv, för passageriktning Iv-Sv-<u>IIv</u></td>
                     </tr>
                     <tr>
                         <td>FdSv</td>
+                        <td>Färdriktningsrelä som styrs av Sv, används för att avgöra passagekontrollen</td>
                     </tr>
                     <tr>
                         <td>FdIIv</td>
+                        <td>Färdriktningsrelä som styrs av IIv, för passageriktning IIv-Sv-<u>Iv</u></td>
                     </tr>
                     <tr>
                         <td>Vsv</td>
+                        <td>Kontrollrelä för aktiverad varningssignalering i Signaler mot banan</td>
                     </tr>
                 </tbody>    
             </table>
         </div>
-        <div class="column col-5 big-text">
+        <div class="column col-3 big-text">
             <main></main>
         </div>
         <div class="column col-mx-auto big-text">
@@ -107,8 +120,6 @@
             <br/>
             <br/>
             <div class="circle">5</div>
-            <br/>
-            <br/>
             <br/>
             <br/>
             <br/>

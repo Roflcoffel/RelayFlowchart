@@ -8,7 +8,12 @@ body {
 }
 
 .sparledning-space {
-  margin-top: 200px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.sparledning-space-small {
+  margin-top: 40px;
 }
 
 .vl {
@@ -35,9 +40,33 @@ body {
   position: absolute;
   cursor: move;
   z-index: 2;
-  width: auto;
-  height: 100px;
-  top: 10px
+  width: 15%;
+  height: auto;
+  top: 40px
+}
+
+.point {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 125px;
+  background-color: red;
+}
+
+#siv {
+  left: 21.4%;
+}
+
+#sv-in {
+  left: 44.25%;
+}
+
+#sv-out {
+  left: 55.5%;
+}
+
+#siiv {
+  left: 78.35%;
 }
 
 .circle {

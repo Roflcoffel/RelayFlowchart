@@ -1,6 +1,8 @@
 class fcVs {
     constructor(visual, offset, row, isPowered) {
         this.visual = visual
+        this.offset = offset
+        this.row = row
         this.x = width/2+offset,
         this.y = fcGap*row,
         this.isPowered = isPowered

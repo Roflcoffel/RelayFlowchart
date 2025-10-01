@@ -1,12 +1,17 @@
 var xoffset = 0, mouse_x = 0
 var train = document.getElementById("train")
-train.onmousedown = MouseDown;
 
-function MouseDown(e) {
+train.onmousedown = Down;
+train.ontouchstart = Down;
+
+function Down(e) {
     e.preventDefault();
     mouse_x = e.clientX;
     document.onmouseup = Reset;
+    document.ontouchend = Reset;
+
     document.onmousemove = Drag;
+    document.ontouchmove = Drag;
 }
 
 function Drag(e) {
@@ -25,6 +30,8 @@ function Drag(e) {
 function Reset() {
     document.onmouseup = null;
     document.onmousemove = null;
+    document.ontouchend = null
+    document.ontouchmove = null
 }
 
 //Position for spårledningsskarvar

@@ -1,6 +1,6 @@
 {
     "linjesrc": "assets/linjebana.png",
-    "title": "CD-Anläggning",
+    "title": "A-Anläggning",
     "table-body": [
         {"name": "Iv", "desc": "Spårledningsupptag"},
         {"name": "Sv", "desc": "Spårledningsupptag"},

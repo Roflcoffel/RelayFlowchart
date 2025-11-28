@@ -2,10 +2,12 @@
     "linjesrc": "assets/linjebana.png",
     "title": "A-Anläggning",
     "table-body": [
-        {"name": "Iv", "desc": "Spårledningsupptag"},
-        {"name": "Sv", "desc": "Spårledningsupptag"},
-        {"name": "IIv", "desc": "Spårledningsupptag"},
+        {"name": "Iv", "desc": "Spårledningsupptag SL1a"},
+        {"name": "Sv", "desc": "Spårledningsupptag SL1b"},
+        {"name": "IIv", "desc": "Spårledningsupptag SL1c"},
         {"name": "RVv", "desc": "Manöverrelä för varningssignalering, repeteringsrelä för <u>Vv</u>"},
+        {"name": "Mv", "desc": "Manöverrelä för varningssignalering, Mv styrs av RVv"},
+        {"name": "Fv", "desc": "Manöverrelä för varningssignalering, Fv starter efter 10 sec förrignning."},
         {"name": "Vv", "desc": "Varningssignalering väg, startar signalering"},
         {"name": "Akv", "desc": "Avkopplingsrelä för vägskyddsanläggning"},
         {"name": "TRAkvB", "desc": "Tid Relä för kontroll om <u>Akv</u> är draget"},
@@ -13,7 +15,11 @@
         {"name": "FdIv", "desc": "Färdriktningsrelä som styrs av Iv, för passageriktning Iv-Sv-<u>IIv</u>"},
         {"name": "FdSv", "desc": "Färdriktningsrelä som styrs av Sv, används för att avgöra passagekontrollen"},
         {"name": "FdIIv", "desc": "Färdriktningsrelä som styrs av IIv, för passageriktning IIv-Sv-<u>Iv</u>"},
-        {"name": "Vsv", "desc": "Kontrollrelä för aktiverad varningssignalering i Signaler mot banan"}
+        {"name": "Vsv", "desc": "Kontrollrelä för aktiverad varningssignalering i Signaler mot banan"},
+        {"name": "Rlv", "desc": "Bom i Uppläge, tänk lyft bom."},
+        {"name": "Rfv", "desc": "Bom i Nedläge, tänk fallen bom."},
+        {"name": "N", "desc": "Fällning av bom"},
+        {"name": "U", "desc": "Höjning av bom"}
     ],
-    "normalt-dragna": ["Iv", "Sv", "IIv", "RVv", "Vv"]
+    "normalt-dragna": ["Iv", "Sv", "IIv", "RVv", "Vv", "Mv", "Fv"]
 }

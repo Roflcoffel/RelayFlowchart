@@ -18,16 +18,30 @@
     <div class="point" id="siiv"></div>
     <img src="assets/train.png" id="train"></img>
     <div class="columns sparledning-space-small">
-        <div class="column col-mx-auto"><img class="img-responsive" src="assets/linjebana.png"></img></div>
+        <div class="column col-mx-auto"><img id="linje-img" class="img-responsive" src=""></img></div>
     </div>
     <div class="columns sparledning-space">
         <div class="column col-mx-auto"></div>
-        <div class="column col-mx-auto"><h1 id="title">CD-Anläggning<h1></div>
+        <div class="column col-mx-auto">
+            <ul class="tab tab-block">
+                <li class="tab-item active">
+                    <a href="#" class="complex active">CD-anläggning</a>
+                </li>
+                <li class="tab-item">
+                    <a href="#" class="complex">B-anläggning</a>
+                </li>
+                <li class="tab-item">
+                    <a href="#" class="complex">A-anläggning</a>
+                </li>
+            </ul>
+            <br />
+            <h1 id="title"></h1>
+        </div>
         <div class="column col-mx-auto"></div>
     </div>
     <div class="columns">
         <div class="column col-1"></div>
-        <div class="column col-5">
+        <div class="column col-6">
             <h3>Normal Läge Relän</h3>
             <ul>
                 <li>SIv = Iv</li>
@@ -35,7 +49,10 @@
             </ul>
             <p>
                 Alla relän i tabellen nedan som har
-                ett <u>understreck</u> är normalt dragna.
+                ett <u>understreck</u> är <b>normalt dragna</b>.
+                <hr>
+                Medans reläerna i flödesschemat till höger är
+                <b>dragna</b> relän ritade med ett <u>understreck</u>.
             </p>
             <table class="table table-hover">
                 <thead>
@@ -44,56 +61,7 @@
                         <th>Beskrivning</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td><u>Iv</u></td>
-                        <td>Spårledningsupptag</td>
-                    </tr>
-                    <tr>
-                        <td><u>Sv</u></td>
-                        <td>Spårledningsupptag</td>
-                    </tr>
-                    <tr>
-                        <td><u>IIv</u></td>
-                        <td>Spårledningsupptag</td>
-                    </tr>
-                    <tr>
-                        <td><u>RVv</u></td>
-                        <td>Manöverrelä för varningssignalering, repeteringsrelä för <u>Vv</u></td>
-                    </tr>
-                    <tr>
-                        <td><u>Vv</u></td>
-                        <td>Varningssignalering väg, startar signalering</td>
-                    </tr>
-                    <tr>
-                        <td>Akv</td>
-                        <td>Avkopplingsrelä för vägskyddsanläggning</td>
-                    </tr>
-                    <tr>
-                        <td>TRAkvB</td>
-                        <td>Tid Relä för kontroll om <u>Akv</u> är draget</td>
-                    </tr>
-                    <tr>
-                        <td>TRVv</td>
-                        <td>Tid Relä för återställning av <u>Vv</u> och varningssignalering vid en belägning av Iv eller IIv</td>
-                    </tr>
-                    <tr>
-                        <td>FdIv</td>
-                        <td>Färdriktningsrelä som styrs av Iv, för passageriktning Iv-Sv-<u>IIv</u></td>
-                    </tr>
-                    <tr>
-                        <td>FdSv</td>
-                        <td>Färdriktningsrelä som styrs av Sv, används för att avgöra passagekontrollen</td>
-                    </tr>
-                    <tr>
-                        <td>FdIIv</td>
-                        <td>Färdriktningsrelä som styrs av IIv, för passageriktning IIv-Sv-<u>Iv</u></td>
-                    </tr>
-                    <tr>
-                        <td>Vsv</td>
-                        <td>Kontrollrelä för aktiverad varningssignalering i Signaler mot banan</td>
-                    </tr>
-                </tbody>    
+                <tbody id="table-body"></tbody>    
             </table>
         </div>
         <div class="column col-3 big-text">
@@ -131,7 +99,8 @@
             <div class="circle">6</div>
         </div>
     </div>
-    <script src="js/flode.js"> </script>
+    <script src="js/flode.js"></script>
+    <script src="dynamic-index.js"></script>
 </body>
 <footer class="container">
     <div class="columns">    

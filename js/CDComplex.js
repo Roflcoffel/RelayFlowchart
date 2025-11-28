@@ -29,21 +29,21 @@ class CDComplex {
         ]
 
         this.sections["S4"] = [
-            {"v": [0], "h": [11]},
+            {"v": [0], "h": [12]},
             new fcVs("Iv", 0, 9, true),
             new fcVs("TrAkvB", 0, 10, true),
-            new fcVs("TrAkvB", 130, 11, false),
             new fcVs("Akv", 0, 11, true),
-            new fcVs("FdIv", -130, 11, ),
+            new fcVs("FdIv", -130, 12, false),
             new fcVs("Vsv", 0, 12, false),
+            new fcVs("TrAkvB", 130, 12, false),
             new fcVs(imgs["mottågr"], 0, 13, false)
         ]
 
         this.sections["S5"] = [
-            {"v": [0], "h": [17, 18]},
+            {"v": [0], "h": [16, 18]},
             new fcVs("Sv", 0, 15, true),
             new fcVs("Vv", 0, 16, true),
-            new fcVs("FdSv", -100, 17, false),
+            new fcVs("FdSv", -100, 16, false),
             new fcVs("RVv", 0, 17, true),
             new fcVs(imgs["motvägv"], 0, 18, false),
             new fcVs(imgs["bell"], -100, 18, false)

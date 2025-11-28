@@ -1,0 +1,19 @@
+{
+    "linjesrc": "assets/linjebana.png",
+    "title": "B-Anläggning",
+    "table-body": [
+        {"name": "Iv", "desc": "Spårledningsupptag"},
+        {"name": "Sv", "desc": "Spårledningsupptag"},
+        {"name": "IIv", "desc": "Spårledningsupptag"},
+        {"name": "RVv", "desc": "Manöverrelä för varningssignalering, repeteringsrelä för <u>Vv</u>"},
+        {"name": "Vv", "desc": "Varningssignalering väg, startar signalering"},
+        {"name": "Akv", "desc": "Avkopplingsrelä för vägskyddsanläggning"},
+        {"name": "TRAkvB", "desc": "Tid Relä för kontroll om <u>Akv</u> är draget"},
+        {"name": "TRVv", "desc": "Tid Relä för återställning av <u>Vv</u> och varningssignalering vid en belägning av Iv eller IIv"},
+        {"name": "FdIv", "desc": "Färdriktningsrelä som styrs av Iv, för passageriktning Iv-Sv-<u>IIv</u>"},
+        {"name": "FdSv", "desc": "Färdriktningsrelä som styrs av Sv, används för att avgöra passagekontrollen"},
+        {"name": "FdIIv", "desc": "Färdriktningsrelä som styrs av IIv, för passageriktning IIv-Sv-<u>Iv</u>"},
+        {"name": "Vsv", "desc": "Kontrollrelä för aktiverad varningssignalering i Signaler mot banan"}
+    ],
+    "normalt-dragna": ["Iv", "Sv", "IIv", "RVv", "Vv"]
+}

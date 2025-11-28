@@ -3,12 +3,22 @@ let fcGap = 80
 
 let imgs = {}
 
+const Complex = {
+    CD: "CD",
+    A: "A",
+    B: "B"
+}
+
 function preload() {
     imgs["bell"] = loadImage("assets/bell.png")
     imgs["motvägr"] = loadImage("assets/motväg_röd.png")
     imgs["motvägv"] = loadImage("assets/motväg_vit.png")
     imgs["mottågv"] = loadImage("assets/mottåg_vit.gif")
     imgs["mottågr"] = loadImage("assets/mottåg_röd.gif")
+    imgs["vfblink"] = loadImage("assets/vf_blink.gif")
+    imgs["vffast"] = loadImage("assets/vf_fast.gif")
+    imgs["bomupp"] = loadImage("assets/bom_upp.png")
+    imgs["bomner"] = loadImage("assets/bom_ner.png")
 }
 
 function setup() {
@@ -18,10 +28,26 @@ function setup() {
     textFont('Roboto');
     textSize(font_size);
     
-    CreateCDComplex()
+    CreateComplex(Complex.B)
 }
 
 function draw() {}
+
+function CreateComplex(complex_type) {
+    switch (complex_type) {
+        case "CD":
+            CreateCDComplex()
+            break;
+        case "B":
+            CreateBComplex()
+            break;
+        case "A":
+            CreateAComplex()
+            break;
+        default:
+            break;
+    }
+}
 
 function CreateCDComplex() {
     //From the start until SIIv has fallen
@@ -35,7 +61,14 @@ function CreateCDComplex() {
 }
 
 function CreateBComplex() {
-    console.log("B Complex not yet implemented")
+    let b = new BComplex()
+    b.Draw()
+
+    strokeWeight(2);
+    for (const name in b.sections) {
+        if(name == "S2") return
+        DrawRelayConnections(b.sections[name])
+    }
 }
 
 function CreateAComplex() {
@@ -61,23 +94,35 @@ function DrawRelayConnections(section) {
     console.log(all_hor)
 
     //Draw all vertical
+    //Made a special case for N1 which is connected
+    //to an empty ("") object, to create a parallel line.
+    //may need to create a special object for parallel objects
+    //which then by the current system gets treated as 1 symbol
+    let end = 5
     for (let j = 0; j < all_vert.length; j++) {
         const vertical = all_vert[j];
         for (let i = 0; i < vertical.length; i++) {
             const text = vertical[i];
+            if(text.visual === "N1") {
+                end = -10
+            }
             if(i+1 < vertical.length) {
-                line(text.x, text.y+5,vertical[i+1].x,vertical[i+1].y-font_size+5)
-            }   
+                line(text.x, text.y+5,vertical[i+1].x,vertical[i+1].y-font_size+end)
+            }
         }
     }
 
     //Draw all horizontal
+    let offset = 15
     for (let j = 0; j < all_hor.length; j++) {
         const horizontal = all_hor[j]
         line(horizontal[0].x, horizontal[0].y-font_size-10, horizontal[horizontal.length-1].x, horizontal[horizontal.length-1].y-font_size-10)
         for (let i = 0; i < horizontal.length; i++) {
             const text = horizontal[i];
-            line(text.x, text.y-font_size, text.x, text.y-font_size-10)
+            if(text.visual === "") {
+                offset = 0
+            }
+            line(text.x, text.y-font_size-10, text.x, text.y-font_size-10+offset)
         }   
     }
 }

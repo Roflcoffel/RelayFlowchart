@@ -2,6 +2,11 @@ body {
   font-size: large;
 }
 
+.small-text {
+  font-size: small;
+  font-weight: 500;
+}
+
 .big-text {
   font-size: 2.0rem;
   font-weight: 500;
